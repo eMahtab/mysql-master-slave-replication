@@ -118,3 +118,4 @@ The changes in mysql master are replicated to mysql replica.
 # References :
 1. https://victoronsoftware.com/posts/mysql-master-slave-replication/
 2. https://www.youtube.com/watch?v=nMbb1199HQU
+3. https://dev.mysql.com/doc/refman/8.4/en/replication.html
