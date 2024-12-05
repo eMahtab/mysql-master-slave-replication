@@ -1,6 +1,6 @@
 # MySQL Master Slave Replication
 
-**A demo showing MySQL data replication from Master to Slave**
+**A demo showing MySQL data replication from Master to Slave**, in this example we setup a single master and a single slave or replica.
 
 # Replication :
 Replication enables data from one database server (known as a source or master) to be copied to one or more database servers (known as replicas or slaves).
