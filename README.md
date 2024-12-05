@@ -88,7 +88,8 @@ CHANGE MASTER TO
 !["Execute Change Master to command on MySQL Slave"](change-master-to.png?raw=true)
 
 ## Step 5 : Execute START SLAVE on MySQL slave
-Execute the command **`START SLAVE;`** on MySQL slave to start the replication
+Execute the command **`START SLAVE;`** on MySQL slave to start the replication, after executing **`START SLAVE;`** you can optionally run **`SHOW REPLICA STATUS;`** to get the status of replica.
+One of the most important parameter is **`Seconds_Behind_Source`** which tells how much replica is from master, ideally this paraeter to be 0, which means replica is up to date with master.
 
 !["Start slave for replication"](start-slave.png?raw=true)
 
