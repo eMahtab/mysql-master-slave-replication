@@ -68,11 +68,23 @@ FLUSH PRIVILEGES;
 Here we create a replication user called `replicator` with password `rotacilper` and grant this user **`REPLICATION SLAVE`** privilege, and finally flush privileges.
 !["Create Replication user on Master"](create-replication-user.png?raw=true)
 
-## Step 3 : SHOW MASTER STATUS
+## Step 3 : Execute SHOW MASTER STATUS on MySQL Master 
 Get the master status, execute the command **`SHOW MASTER STATUS`** on Mysql Master to find the Binlog file and position.
 
 !["Get Master status"](show-master-status.png?raw=true)
 
-## Step 4 : 
+## Step 4 : Connect to MySQL slave and execute CHANGE MASTER TO
+Next we need to execute **`CHANGE MASTER TO`** command on MySQL slave. Connect to MySQL slave and execute below command, update MASTER_LOG_FILE and MASTER_LOG_POS values which you get from executing SHOW MASTER STATUS command on MySQL master.
+```sql
+CHANGE MASTER TO
+  MASTER_HOST='mysql_master',
+  MASTER_PORT=3306,
+  MASTER_USER='replicator',
+  MASTER_PASSWORD='rotacilper',
+  MASTER_LOG_FILE='bin.000004',
+  MASTER_LOG_POS=871,
+  GET_MASTER_PUBLIC_KEY=1;
+```
+!["Execute Change Master to command on MySQL Slave"](change-master-to.png?raw=true)
 
 
