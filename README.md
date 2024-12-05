@@ -89,11 +89,13 @@ CHANGE MASTER TO
 
 ## Step 5 : Execute START SLAVE on MySQL slave
 Execute the command **`START SLAVE;`** on MySQL slave to start the replication, after executing **`START SLAVE;`** you can optionally run **`SHOW REPLICA STATUS;`** to get the status of replica.
-One of the most important parameter is **`Seconds_Behind_Source`** which tells how much replica is from master, ideally this paraeter to be 0, which means replica is up to date with master.
+One of the most important parameter is **`Seconds_Behind_Source`** which tells how much behind, replica is from master, ideally **`Seconds_Behind_Source`** should always be 0, which means replica is up to date with master.
 
 !["Start slave for replication"](start-slave.png?raw=true)
 
 ## Step 6 : See Replication in action
 By performing the step 1 to 5, we have set the replication on Slave from Master, now whatever changes are done on master mysql will be replicated to slave automatically.
 
+!["Update Master database"](update-database.png?raw=true)
 
+We create `users` table under test database on the Master and insert records into the users table.
