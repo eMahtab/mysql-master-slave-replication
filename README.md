@@ -2,6 +2,9 @@
 
 **A demo showing MySQL data replication from Master to Slave**
 
+# Replication :
+Replication enables data from one database server (known as a source or master) to be copied to one or more database servers (known as replicas or slaves).
+Replication is usually asynchronous by default; replicas do not need to be connected permanently to receive updates from a source.
 
 ## Step 1 : Create the Docker compose file and execute docker compose up
 Below docker-compose.yml declares two services, named as mysql_master and mysql_slave_1 (in docker compose file actual containers are named as mysql-master and mysql-slave-1). We are using **mysql:8.0** as the docker image, and declare root user password as `toor` and create a test database.
