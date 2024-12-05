@@ -101,3 +101,17 @@ By performing the step 1 to 5, we have set the replication on Slave from Master,
 We create `users` table under test database on the Master and insert records into the users table.
 
 !["Replication on Slave"](replication-on-slave.png?raw=true)
+
+## Step 6a : See Replication in action : update on master database are replicated to slave
+We delete 4 users having id as either 1, 3, 7 or 9, on the mysql master.
+
+!["Deleting some of the user records"](delete-records-on-master.png?raw=true)
+
+The changes in mysql master are replicated to mysql replica.
+
+!["Replication on slave"](slave-after-delete-on-master.png?raw=true)
+
+
+# References :
+1. https://victoronsoftware.com/posts/mysql-master-slave-replication/
+2. https://www.youtube.com/watch?v=nMbb1199HQU
