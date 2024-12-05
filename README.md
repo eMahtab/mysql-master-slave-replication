@@ -103,7 +103,7 @@ We create `users` table under test database on the Master and insert records int
 !["Replication on Slave"](replication-on-slave.png?raw=true)
 
 ## Step 6a : See Replication in action : update on master database are replicated to slave
-We delete 4 users having id as either 1, 3, 7 or 9, on the mysql master.
+We delete 4 users having id as either 3, 7, 9 or 10 on the mysql master.
 
 !["Deleting some of the user records"](delete-records-on-master.png?raw=true)
 
