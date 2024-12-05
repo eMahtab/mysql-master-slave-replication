@@ -57,7 +57,7 @@ volumes:
 
 !["MySQL Master and Slave containers"](docker-containers.png?raw=true)
 
-## Step 2 : Create Replication user on Master
+## Step 2 : Create Replication user on Master with REPLICATION SLAVE privilege
 Next we need to create a replication user on Master and grant that user `REPLICATION SLAVE` privilege.
 To do this, we execute bash against master **`docker exec -it mysql-master bash`** and connect to mysql **`mysql -uroot -ptoor`** running on master, then execute below mysql commands.
 ```sql
@@ -65,5 +65,5 @@ CREATE USER 'replicator'@'%' IDENTIFIED BY 'rotacilper';
 GRANT REPLICATION SLAVE ON *.* TO 'replicator'@'%';
 FLUSH PRIVILEGES;
 ```
-Here we create a replication user called `replicator` with password `rotacilper` and grant this user REPLICATION SLAVE privilege, and finally flush privileges.
+Here we create a replication user called `replicator` with password `rotacilper` and grant this user **`REPLICATION SLAVE`** privilege, and finally flush privileges.
 !["Create Replication user on Master"](create-replication-user.png?raw=true)
