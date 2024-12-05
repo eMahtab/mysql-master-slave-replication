@@ -69,7 +69,7 @@ Here we create a replication user called `replicator` with password `rotacilper`
 !["Create Replication user on Master"](create-replication-user.png?raw=true)
 
 ## Step 3 : Execute SHOW MASTER STATUS on MySQL Master 
-Get the master status, execute the command **`SHOW MASTER STATUS`** on Mysql Master to find the Binlog file and position.
+Get the master status, execute the command **`SHOW MASTER STATUS;`** on Mysql Master to find the Binlog file and position.
 
 !["Get Master status"](show-master-status.png?raw=true)
 
@@ -86,5 +86,13 @@ CHANGE MASTER TO
   GET_MASTER_PUBLIC_KEY=1;
 ```
 !["Execute Change Master to command on MySQL Slave"](change-master-to.png?raw=true)
+
+## Step 5 : Execute START SLAVE on MySQL slave
+Execute the command **`START SLAVE;`** on MySQL slave to start the replication
+
+!["Start slave for replication"](start-slave.png?raw=true)
+
+## Step 6 : See Replication in action
+By performing the step 1 to 5, we have set the replication on Slave from Master, now whatever changes are done on master mysql will be replicated to slave automatically.
 
 
