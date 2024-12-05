@@ -116,6 +116,11 @@ The changes in mysql master are replicated to mysql replica.
 
 !["Replication on slave"](slave-after-delete-on-master.png?raw=true)
 
+## Data doesn't replicated from replica to master
+
+**Creating a table on replica and inserting a record**
+
+!["In master-slave replication data is not replicated from slave to master"](write-on-replica.png?raw=true)
 
 # References :
 1. https://victoronsoftware.com/posts/mysql-master-slave-replication/
