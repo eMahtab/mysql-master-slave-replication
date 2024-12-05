@@ -99,3 +99,5 @@ By performing the step 1 to 5, we have set the replication on Slave from Master,
 !["Update Master database"](update-database.png?raw=true)
 
 We create `users` table under test database on the Master and insert records into the users table.
+
+!["Replication on Slave"](replication-on-slave.png?raw=true)
