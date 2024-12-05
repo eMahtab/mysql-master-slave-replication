@@ -2,7 +2,7 @@
 
 **A demo showing MySQL data replication from Master to Slave**, in this example we setup a single master and a single slave or replica.
 
-### Prerequisite : You would need Docker installed on your system to follow along this demo.
+### !!! Prerequisite : You would need Docker installed on your system to follow along this demo.
 
 # Replication :
 Replication enables data from one database server (known as a source or master) to be copied to one or more database servers (known as replicas or slaves).
