@@ -3,7 +3,7 @@
 **A demo showing MySQL data replication from Master to Slave**
 
 
-### Step 1 : Create the Docker compose file and execute docker compose up
+## Step 1 : Create the Docker compose file and execute docker compose up
 Below docker-compose.yml declares two services, named as mysql_master and mysql_slave_1. We are using **mysql:8.0** as the docker image, and declare root user password as `toor` and create a test database.
 **Make sure docker engine is running on your host machine before running the `docker compose up` command.**
 
@@ -54,3 +54,14 @@ volumes:
 ```
 
 !["Running MySQL Master and Slave as Docker Containers"](docker-compose-up.png?raw=true)
+
+## Step 2 : Create Replication user on Master
+Next we need to create a replication user on Master and grant that user `REPLICATION SLAVE` privilege.
+To do this, we execute bash against Master and connect to mysql, then execute below mysql commands.
+```sql
+CREATE USER 'replicator'@'%' IDENTIFIED BY 'rotacilper';
+GRANT REPLICATION SLAVE ON *.* TO 'replicator'@'%';
+FLUSH PRIVILEGES;
+```
+Here we create a replication user called `replicator` with password `rotacilper` and grant this user REPLICATION SLAVE privilege, and finally flush privileges.
+!["Create Replication user on Master"](create-replication-user.png?raw=true)
