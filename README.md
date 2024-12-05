@@ -123,6 +123,7 @@ The changes in mysql master are replicated to mysql replica.
 !["In master-slave replication data is not replicated from slave to master"](write-on-replica.png?raw=true)
 
 **Data is not replicated to master in Master-Slave replication**
+
 !["Unidirectional Replication"](unidirectional-replication.png?raw=true)
 
 # References :
